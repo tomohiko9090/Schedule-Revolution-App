@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% block header %}
+<nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block" href="{% url 'list' %}">Top</a>
+    </div>
+  </nav>
+<div style="background-color:#69b076">
+    <div style=text-align:center>
+        <br><br>
+        <h3><b>お名前と所属部署を入力してください。</b></h3>
+        <h5><font color="orange">所属部署は、複数入力しても構いません。</font></h5>
+        <br><br>
+    </div>
+</div>
+{% endblock header %}
+
+
+{% block content %}
+<br><br>
+<form method='POST' enctype="multipart/form-data">{% csrf_token %}
+    <div style="text-align: center;">
+        <p>お名前：<input type='text' name='お名前'></p>
+        <p>所属部署：<input type='text' name='所属部署'></p>
+        <p></p>
+        <!-- <p>プロフィール画像：<input type="file" name='snsimage'></p> -->
+    </div><br><br>
+    <div style="background-color:#FEEEED;">
+        <div style=text-align:center>
+            <br><br>
+            <h3><b>「曜日ごとにスケジュール」と「1週間のうちにやるべきタスク」を教えて下さい。</b></h3>
+            <br><br>
+        </div>
+    </div>
+
+    <div class='container' style=text-align:center>
+        <div class="row">
+            <!-- カラム① -->
+            <div class="col-6" >
+                <br>
+                <h3><b><u>スケジュール</u></b></h3>
+                <p>複数ある場合は、改行してください。</p>
+                <p>スケジュールがない場合は、空欄で構いません。</p>
+                <br>
+                <b>日曜日の予定</b>
+                <p><textarea name="日曜日の予定" placeholder="13:00 ゼミ                      18:00 面接"></textarea></p>
+                <b>月曜日の予定</b>
+                <p><textarea name="月曜日の予定" placeholder="13:00 ゼミ                      18:00 面接"></textarea></p>
+                <b>火曜日の予定</b>
+                <p><textarea name="火曜日の予定" placeholder="13:00 ゼミ                      18:00 面接"></textarea></p>
+                <b水曜日の予定b>
+                <p><textarea name="水曜日の予定" placeholder="13:00 ゼミ                      18:00 面接"></textarea></p>
+                <b>木曜日の予定</b>
+                <p><textarea name="木曜日の予定" placeholder="13:00 ゼミ                      18:00 面接"></textarea></p>
+                <b>金曜日の予定</b>
+                <p><textarea name="金曜日の予定" placeholder="13:00 ゼミ                      18:00 面接"></textarea></p>
+                <b>土曜日の予定</b>
+                <p><textarea name="土曜日の予定" placeholder="13:00 ゼミ                      18:00 面接"></textarea></p>
+
+            </div>
+            <!-- カラム② -->
+            <div class="col-6">
+                <br>
+                <h3><b><u>タスク</u></b></h3>
+                <p>スコアについては6段階で表記してください。</p>
+                <p>タスクがない場合は、空欄で構いません。</p>
+                <br>
+                <div style=text-align:center>
+                    <p><b>タスク1個目</b><input type='text' name='task1'></p>
+                    <span>緊急度<input type='number' name='urgency_weight1' min="1" max="6"></span>
+                    <span>重要度<input type='number' name='importance_weight1' min="1" max="6"></span>
+                    <span>モチベーション<input type='number' name='motivation_weight1' min="1" max="6"></span>
+                    <span>難易度<input type='number' name='difficult_weight1' min="1" max="6"></span>
+                    <br><br><br>
+                    <p><b>タスク2個目</b><input type='text' name='task2'></p>
+                    <span>緊急度<input type='number' name='urgency_weight2' min="1" max="6"></span>
+                    <span>重要度<input type='number' name='importance_weight2' min="1" max="6"></span>
+                    <span>モチベーション<input type='number' name='motivation_weight2' min="1" max="6"></span>
+                    <span>難易度<input type='number' name='difficult_weight2' min="1" max="6"></span>
+                    <br><br><br>
+                    <p><b>タスク3個目</b><input type='text' name='task3'></p>
+                    <span>緊急度<input type='number' name='urgency_weight3' min="1" max="6"></span>
+                    <span>重要度<input type='number' name='importance_weight3' min="1" max="6"></span>
+                    <span>モチベーション<input type='number' name='motivation_weight3' min="1" max="6"></span>
+                    <span>難易度<input type='number' name='difficult_weight3' min="1" max="6"></span>
+                    <br><br><br>
+                    <p><b>タスク4個目</b><input type='text' name='task4'></p>
+                    <span>緊急度<input type='number' name='urgency_weight4' min="1" max="6"></span>
+                    <span>重要度<input type='number' name='importance_weight4' min="1" max="6"></span>
+                    <span>モチベーション<input type='number' name='motivation_weight4' min="1" max="6"></span>
+                    <span>難易度<input type='number' name='difficult_weight4' min="1" max="6"></span>
+                    <br><br><br>
+                    <p><b>タスク5個目</b><input type='text' name='task5'></p>
+                    <span>緊急度<input type='number' name='urgency_weight5' min="1" max="6"></span>
+                    <span>重要度<input type='number' name='importance_weight5' min="1" max="6"></span>
+                    <span>モチベーション<input type='number' name='motivation_weight5 min="1" max="6"></span>
+                    <span>難易度<input type='number' name='difficult_weight5' min="1" max="6"></span>
+                    <br><br><br>
+                    <p><b>タスク6個目</b><input type='text' name='task6'></p>
+                    <span>緊急度<input type='number' name='urgency_weight6' min="1" max="6"></span>
+                    <span>重要度<input type='number' name='importance_weight6' min="1" max="6"></span>
+                    <span>モチベーション<input type='number' name='motivation_weight6' min="1" max="6"></span>
+                    <span>難易度<input type='number' name='difficult_weight6' min="1" max="6"></span>
+                    <br><br><br>
+                    <p><b>タスク7個目</b><input type='text' name='task7'></p>
+                    <span>緊急度<input type='number' name='urgency_weight7' min="1" max="6"></span>
+                    <span>重要度<input type='number' name='importance_weight7' min="1" max="6"></span>
+                    <span>モチベーション<input type='number' name='motivation_weight7' min="1" max="6"></span>
+                    <span>難易度<input type='number' name='difficult_weight7' min="1" max="6"></span>
+                    <br><br><br>
+                    <p><b>タスク8個目</b><input type='text' name='task8'></p>
+                    <span>緊急度<input type='number' name='urgency_weight8' min="1" max="6"></span>
+                    <span>重要度<input type='number' name='importance_weight8' min="1" max="6"></span>
+                    <span>モチベーション<input type='number' name='motivation_weight8' min="1" max="6"></span>
+                    <span>難易度<input type='number' name='difficult_weight8' min="1" max="6"></span>
+                    <br><br><br>
+                    <p><b>タスク9個目</b><input type='text' name='task9'></p>
+                    <span>緊急度<input type='number' name='urgency_weight9' min="1" max="6"></span>
+                    <span>重要度<input type='number' name='importance_weight9' min="1" max="6"></span>
+                    <span>モチベーション<input type='number' name='motivation_weight9' min="1" max="6"></span>
+                    <span>難易度<input type='number' name='difficult_weight9' min="1" max="6"></span>
+                    <br><br><br>
+                    <p><b>タスク10個目</b><input type='text' name='task10'></p>
+                    <span>緊急度<input type='number' name='urgency_weight10' min="1" max="6"></span>
+                    <span>重要度<input type='number' name='importance_weight10' min="1" max="6"></span>
+                    <span>モチベーション<input type='number' name='motivation_weight10' min="1" max="6"></span>
+                    <span>難易度<input type='number' name='difficult_weight10' min="1" max="6"></span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <input type='submit' value='新メンバーを追加！😆' class="btn btn-success">
+
+</form>
+<br><br>
+
+{% endblock content %}
+
+
+<div style="text-align:center">
+    <br>
+    <form action="" method="POST">{% csrf_token %}
+        {{form.as_p}}
+        <input type='submit' value='新メンバーを追加！😆' class="btn btn-success">
+    </form><br><br>
+</div>
+
+
+<div style="background-color:#FEEEED;">
+    <div style=text-align:center>
+        <br><br>
+        <h3><b>「曜日ごとの予定」と「その予定の数」を教えて下さい。</b></h3>
+        <h5><font color="orange">注意！スケジュール、タスク毎に改行して下さい😖</font></h5>
+        <br><br>
+    </div>
+</div>
+
+<div class='container' style=text-align:center>
+    <div class="row">
+        <!-- カラム① -->
+        <div class="col-6" >
+            <br>
+            <h3><b><u>スケジュール</u></b></h3>
+            <h5>例)<b>Sun:</b> 「13:00 ゼミ」</h5>
+            <h5>&emsp;&emsp;&emsp;&emsp;「18:00 面接」</h5>
+            <h5><b>Sun schedule number:</b> 「2」</h5>
+            <br><br>
+        </div>
+        <!-- カラム② -->
+        <div class="col-6">
+            <br>
+            <h3><b><u>タスク</u></b></h3>
+        </div>
+    </div>
+</div>
+<div style=text-align:center>
+    <!-- <input type="submit" value="      次へ☞      " class="btn alert-success" > -->
+    <br>
+    <br>
+    <br>
+</div>

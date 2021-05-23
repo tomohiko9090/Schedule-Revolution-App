@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br><br><br>
+<div style=text-align:center>
+    <h4>本当にMypageを削除しますか?🥺</h4><br>
+<form action='' method="POST">{% csrf_token %}
+    <input type="submit" value='Mypage削除' class='btn btn-danger'>
+</form>
+</div>
+{% endblock content %}

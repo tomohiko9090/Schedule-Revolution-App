@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+
+<nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#">Tour</a> -->
+      <a class="py-2 d-none d-md-inline-block" href="{% url 'list' %}">Top</a>
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#">Product</a> -->
+      <a class="py-2 d-none d-md-inline-block" type="button" onclick="history.back()">Mypage</a>
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#">Features</a> -->
+      <a class="py-2 d-none d-md-inline-block" href="{% url 'table' object.pk %}">{{ object.お名前 }}さんのアクションプラン</a>
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a> -->
+      <a class="py-2 d-none d-md-inline-block" href="{% url 'plan' object.pk %}">アクションプランのDL</a>
+      <a class="py-2 d-none d-md-inline-block" href="{% url 'update' object.pk %}">更新</a>
+      <a class="py-2 d-none d-md-inline-block" href="{% url 'delete' object.pk %}">Mypageを削除</a>
+
+
+
+    </div>
+  </nav>
+
+<div style="background-color:#EDF7FF;">
+    <br><br><br>
+    <h1 class="card-title" style=text-align:center>「{{ object.お名前 }}さん」の今週の予定</h1>
+    <h4 class='card-text' style=text-align:center>〜{{ object.所属部署 }}〜</h4>
+    <br><br>
+</div>
+{% endblock header %}
+
+
+{% block content %}
+<div class='container'>
+    <img src="{% url 'plot' object.pk %}" width=1200 height=600>
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+            </div>
+            <div class="col-5">
+                <div style=text-align:left>
+                    *
+                    <span style="color:#54B5FF">モチベ1  </span>
+                    <span style="color:#c2afff">モチベ2  </span>
+                    <span style="color:#7fff5f">モチベ3  </span>
+                    <span style="color:#FFC55F">モチベ4  </span>
+                    <span style="color:#ff0000">モチベ5  </span>
+                    <span style="color:#a31010">モチベ6  </span>
+                    <p>*文字の大きさは「難易度」を表す</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h4 class="card-header"><b>〜今週のスケジュール〜</b></h4>
+            <div class="card">
+                <div class="card-body">
+                    <h5>日曜日🌅
+                    </h5>
+                    <h5 class="card-title">{{ object.日曜日の予定 | linebreaks }}</h5>
+                    <br>
+                    <h5>月曜日🌕</h5>
+                    <h5 class="card-title">{{ object.月曜日の予定 | linebreaks }}</h5>
+                    <br>
+                    <h5>火曜日🔥</h5>
+                    <h5 class="card-title">{{ object.火曜日の予定 | linebreaks }}</h5>
+                    <br>
+                    <h5>水曜日💧</h5>
+                    <h5 class="card-title">{{ object.水曜日の予定 | linebreaks }}</h5>
+                    <br>
+                    <h5>木曜日🌴</h5>
+                    <h5 class="card-title">{{ object.木曜日の予定 | linebreaks }}</h5>
+                    <br>
+                    <h5>金曜日💰</h5>
+                    <br>
+                    <h5 class="card-title">{{ object.金曜日の予定 | linebreaks }}</h5>
+                    <h5>土曜日🪐</h5>
+
+                    <h5 class="card-title">{{ object.土曜日の予定 | linebreaks }}</h5>
+                </div>
+            </div>
+ 
+        </div>
+        <div class="col-6">
+            <h4 class="card-header"><b>〜今週のタスク〜</b></h4>
+            <div class="card">
+                
+                <div class="card-body">
+                        
+                        <h5 class="card-title">・{{ object.task1 }}</h5>
+                        <h5 class="card-title">・{{ object.task2 }}</h5>
+                        <h5 class="card-title">・{{ object.task3 }}</h5>
+                        <h5 class="card-title">・{{ object.task4 }}</h5>
+                        <h5 class="card-title">・{{ object.task5 }}</h5>
+                        <h5 class="card-title">・{{ object.task6 }}</h5>
+                        <h5 class="card-title">・{{ object.task7 }}</h5>
+                        <h5 class="card-title">・{{ object.task8 }}</h5>
+                        <h5 class="card-title">・{{ object.task9 }}</h5>
+                        <h5 class="card-title">・{{ object.task10 }}</h5>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+    <br><br>
+<h4>〜アクションプランの最適化〜</h4>
+<div style=text-align:left>
+    <a href="{% url 'table' object.pk %}" class="btn btn-success">アクションプランを確認する</a>
+    <a href="{% url 'plan' object.pk %}" class="btn btn-danger">アクションプランのDL</a>
+</div>
+<br>
+<br><br>
+
+{% endblock content %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<div style="background-color:#EDF7FF;">
+<nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'list' %}">Top</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'create' %}">新メンバー追加</a>
+    <a class="py-2 d-none d-md-inline-block" href="https://tabibitojin.com/importance-urgency-matrix-priority/">緊急重要マトリクスとは？</a>
+  </div>
+</nav>
+</div>
+
+<!-- <body background="{% static 'network.jpg' %}"></body> -->
+<div class="jumbotron jumbotron-fluid text-white bg-dark">
+    <div class="container">
+    <h1 class="display-4">ちょっと部長！今週パツってます。</h1>
+    <p class="lead">タスク地獄の部下を助けます</p>
+
+  </div>
+</div>
+{% endblock header %}
+
+{% block content %}
+<link rel='stylesheet' type='text/css' href="{% static 'style.css' %}">
+
+<div class="container">
+  <div class="row">
+      <div class="col-7">
+        <img src="{% url 'bar' %}" width=600 height=600>
+        <h5><b>部長👨‍💼</b></h5>
+        <h5>部下の一週間のスケジュール、タスクを確認し、仕事の最適な割り振りを行います。</h5>
+        <br>
+        <h5><b>部下🧑🏻‍💻🧑🏼‍💻🧑🏽‍💻</b></h5>
+        <h5>自分がやるべきことの見えるか&アクションプランの自動生成により「仕事に追われている」という感覚をなくします。</h5>
+      </div>
+      <div class="col-5">
+        <div style=text-align:right>
+          <a href="{% url 'create' %}" class="btn alert-success" >新メンバー追加</a>
+        </div>
+        {% for item in object_list %}
+        <div class="card">
+          <h5 class="card-header"><b>{{item.お名前}}</b></h5>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.所属部署 }}</h5>
+              <div>
+                <span style=text-align:left>
+                  <a href="{% url 'detail' item.pk %}" class="btn btn-info">Mypage</a>
+                </span>
+                <span style=text-align:right>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;スケジュール作成日：{{ item.更新日 }}
+                </span>
+              </div>
+
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+  </div>
+
+{% endblock content %}
+
+

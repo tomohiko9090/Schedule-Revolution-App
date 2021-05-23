@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#">Tour</a> -->
+      <a class="py-2 d-none d-md-inline-block" href="{% url 'list' %}">Top</a>
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#">Features</a> -->
+      <a class="py-2 d-none d-md-inline-block" type="button" onclick="history.back()">Mypage</a>
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a> -->
+
+    </div>
+  </nav>
+
+<div style="background-color:#FDD1B0;">
+    <br><br><br>
+    <h1 class="card-title" h2 style=text-align:center><b>あなただけのアクションプラン</h1></b>
+    
+ 
+    <br><br>
+</div>
+{% endblock header %}
+
+{% block content %}
+<br>
+<div class="container">
+    <div class="row">
+        
+        <div style=text-align:left>
+
+            <h2>{{ table | safe }}</h2>
+        </div>
+        
+    </div>
+    <br>
+    <p>以下のようなアルゴリズムで予定が作成されています。</p>
+    <p>1. 「重要であり緊急でもあるもの」の次は「重要であり緊急でないもの」を行う。</p>
+    <p>2. スケジュールが多い日はタスクを減らす。</p>
+    <p>3. 週の後半にバッファを残す。</p>
+    <p>4. 午前中には難易度の高い仕事を行う。</p>
+    <p>5. １番目にやることには、難易度が低く達成できるものを配置する。</p>
+
+    <p></p>
+</div>
+
+{% endblock content %}

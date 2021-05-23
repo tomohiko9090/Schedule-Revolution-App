@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block" href="{% url 'list' %}">Top</a>
+      <a class="py-2 d-none d-md-inline-block" href="{% url 'detail' object.pk %}">Mypage</a>
+    </div>
+</nav>
+<div style="background-color:#69b076">
+    <div style=text-align:center>
+        <br><br>
+        <h3><b>変更して更新ボタンをクリック!</b></h3>
+        <br><br>
+    </div>
+</div>
+{% endblock header %}
+
+{% block content %}
+<form action='' method='POST'>{% csrf_token %}
+    <br>
+    <div style=text-align:center>
+    {{ form.as_p }}
+        <input type='submit' value='更新する' class="btn btn-success">
+    </div>
+</form>
+<br>
+{% endblock content %}
+    
+
