@@ -6,8 +6,6 @@ class Oneteam_model(models.Model):
 
     所属部署 = models.CharField(max_length=100)
 
-    # 画像 = models.ImageField(upload_to='', blank=True)
-
     更新日 = models.DateField(auto_now_add=True)
 
     日曜日の予定 = models.TextField(blank=True)

@@ -337,7 +337,7 @@ def barfunk(request):
         ax.text(index+1, i[1], i[1], ha='center', va='bottom', fontsize=20)
 
     ax.bar(bar_l, busy_l, tick_label=name_l, color='gray')
-    ax.set_title('Busyness', fontsize=30, fontname='IPAexGothic')
+    ax.set_title('今週の忙しさ具合', fontsize=30, fontname='IPAexGothic')
     ax.set_xticklabels(name_l, rotation=45, fontsize=20)
     ax.grid(True)
     ax.set_axisbelow(True)
