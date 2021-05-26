@@ -1,18 +1,14 @@
 # 制作物名：「ちょっと部長！今週パツってます。」  
 
+## 開発物概要
 **言語**：Python 3.9.4  
-
 **フレームワーク**：Django 3.1.7  
-
 **ページのリンク**：http://45.76.98.152/list/  
-
 **開発環境**：MacOS  
-
 **外部サーバー(OS)**：vultur(ubuntu)  
-
 **DB**：外部サーバー上ではPostgreSQLを使用  
 
-
+## 
 **メイン機能**：  
 ・部下にとって仕事の内容をどのように捉えているのか可視化できる(matplotlibを使用)  
 ・一週間のスケジュールの自動で作成できる   
@@ -28,10 +24,14 @@
 ・作成した一週間のスケジュールをpdfでダウンロードできるようにした点。  
 
 ## アプリの使用方法
-1. このファイルをclone
-2. 以下を実行します。
+1. このリポジトリをclone
+2. 以下を実行
+以下を実行
 ```
-
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py createsurperuser
+python3 manage.py runserver
 ```
 
 
