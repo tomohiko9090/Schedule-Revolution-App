@@ -270,7 +270,7 @@ def matrixfunk(request, pk):
     ax1.set_title('〜今週のタスク〜'.format(task1), size=25)
 
     #　以下マトリクス作成
-    color_d = {1:'#54B5FF', 2:'#c2afff', 3:'#7fff5f', 4:'#FFC55F', 5:'#ff0000', 6:'a31010'} 
+    color_d = {1:'#54B5FF', 2:'#c2afff', 3:'#7fff5f', 4:'#FFC55F', 5:'#ff0000', 6:'#a31010'} 
 
     ax2 = fig.add_subplot(122)
     ax2.plot([0, 6.5], [3.5, 3.5], color='black', linewidth=7, alpha=0.3)
