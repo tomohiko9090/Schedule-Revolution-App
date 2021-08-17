@@ -1,16 +1,4 @@
-# 制作物名：「社会人1年目のスケジュール最適化アプリ」  
-
-## 詳細
-**ページのリンク**：http://45.76.98.152/list/  
-**言語**：Python 3.9.4  
-**フレームワーク**：Django 3.1.7  
-**開発期間**:3週間  
-**開発環境**：MacOS  
-**外部サーバー(OS)**：vultur(ubuntu)  
-**DB**：外部サーバー上ではPostgreSQLを使用  
-
-
-## 内容
+ ## 内容
 **メイン機能**：  
 - 1週間のスケジュールの自動で作成、可視化できる(matplotlibを使用)     
 
@@ -40,17 +28,31 @@ python3 manage.py runserver
 
 
 # 社会人1年目のスケジュール最適化アプリ
+
 1週間のスケジュールの生成&可視化アプリ
 
 # DEMO
 
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+![スクリーンショット 0003-08-17 午後3 51 08](https://user-images.githubusercontent.com/66200485/129677581-092644f7-91bf-41a7-82aa-1d2a4cf09fcb.png)
+![スクリーンショット 0003-08-17 午後3 51 58](https://user-images.githubusercontent.com/66200485/129677684-8a9f66b6-880a-40f3-8610-3021cf19ef6a.png)
+![スクリーンショット 0003-08-17 午後3 52 39](https://user-images.githubusercontent.com/66200485/129677783-0c8b88ad-ae5f-45be-9784-54a7b1f2dc83.png)
+![スクリーンショット 0003-08-17 午後3 52 53](https://user-images.githubusercontent.com/66200485/129677819-3b6bf278-3dc4-4f60-bf1e-604f8e3d51f0.png)
+
+
 
 # Features
 
 "hoge"のセールスポイントや差別化などを説明する
 
 # Requirement
+
+**ページのリンク**：http://45.76.98.152/list/  
+**言語**：Python 3.9.4  
+**フレームワーク**：Django 3.1.7  
+**開発期間**:3週間  
+**開発環境**：MacOS  
+**外部サーバー(OS)**：vultur(ubuntu)  
+**DB**：外部サーバー上ではPostgreSQLを使用 
 
 "hoge"を動かすのに必要なライブラリなどを列挙する
 
