@@ -1,8 +1,4 @@
-
- ## 内容
-**メイン機能**：  
-- 1週間のスケジュールの自動で作成、可視化できる(matplotlibを使用)     
-
+    
 **サブ機能**：  
 - リーダーはチームメンバーが仕事に対してどのような心境であるのか把握できる  
 
@@ -15,15 +11,7 @@
 
 
 ## アプリの使用方法
-1. このリポジトリをclone
-2. 以下を実行
-以下を実行
-```
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py createsurperuser
-python3 manage.py runserver
-```
+
 
 
 
@@ -72,29 +60,42 @@ Mypageに戻り、「アクションプランのDL(赤ボタン)」をクリッ�
 **開発期間**:3週間  
 **開発環境**：MacOS  
 **外部サーバー(OS)**：vultur(ubuntu)  
-**DB**：外部サーバー上ではPostgreSQLを使用 
-
-"hoge"を動かすのに必要なライブラリなどを列挙する
-
-* huga 3.5.2
-* hogehuga 1.0.2
+**DB**：外部サーバー上ではPostgreSQLを使用  
+**ライブラリ**:  
+matplotlib 3.4.2  
+pandas 1.3.0  
+numpy 1.20.0  
+json  
+io  
+copy  
+csv  
+japanize_matplotlib  
 
 # Installation
 
-Requirementで列挙したライブラリなどのインストール方法を説明する
-
 ```bash
-pip install huga_package
+pip install python3
+pip install Django
+pip install matplotlib
+pip install pandas
+pip install numpy
+pip install json
+pip install io
+pip install copy
+pip install csv
+pip install japanize_matplotlib
 ```
 
 # Usage
 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
-
+以下をターミナルで実行して下さい。
 ```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
+git clone https://github.com/tomohiko9090/ScheduleRevolution.git
+cd 
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py createsurperuser
+python3 manage.py runserver
 ```
 
 # Note
