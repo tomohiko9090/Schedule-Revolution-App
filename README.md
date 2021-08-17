@@ -91,31 +91,13 @@ pip install japanize_matplotlib
 以下をターミナルで実行して下さい。
 ```bash
 git clone https://github.com/tomohiko9090/ScheduleRevolution.git
-cd 
+cd ScheduleRevolution/
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py createsurperuser
 python3 manage.py runserver
 ```
 
-# Note
-
-注意点などがあれば書く
-
 # Author
 
-作成情報を列挙する
-
-* 作成者
-* 所属
-* E-mail
-
-# License
-ライセンスを明示する
-
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
-
-社内向けなら社外秘であることを明示してる
-
-"hoge" is Confidential.
-
+* 作成者 Hikotomo!
