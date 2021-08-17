@@ -35,29 +35,29 @@ python3 manage.py runserver
 # DEMO
 
 1. ホーム画面で「新メンバー追加」をクリックして下さい。  
-![スクリーンショット 0003-08-17 午後3 51 08](https://user-images.githubusercontent.com/66200485/129677581-092644f7-91bf-41a7-82aa-1d2a4cf09fcb.png)
+![スクリーンショット 0003-08-17 午後3 51 08](https://user-images.githubusercontent.com/66200485/129677581-092644f7-91bf-41a7-82aa-1d2a4cf09fcb.png)  
 ホーム画面
 <br>
 
 2. 名前と所属部署を入力した後、「曜日ごとのスケジュール」と「1週間のうちにやるべきタスク」を入力し、「新メンバー追加」をクリックして下さい。    
-![スクリーンショット 0003-08-17 午後3 51 58](https://user-images.githubusercontent.com/66200485/129677684-8a9f66b6-880a-40f3-8610-3021cf19ef6a.png)
+![スクリーンショット 0003-08-17 午後3 51 58](https://user-images.githubusercontent.com/66200485/129677684-8a9f66b6-880a-40f3-8610-3021cf19ef6a.png)  
 入力ページ
 <br>  
 
 3. Mypageボタンをクリックすると、「曜日ごとのスケジュール」と「1週間のうちにやるべきタスク」が表示されます。  
 ページ下にある「アクションプランを確認する(緑ボタン)」をクリックして下さい。  
-![スクリーンショット 0003-08-17 午後3 52 39](https://user-images.githubusercontent.com/66200485/129677783-0c8b88ad-ae5f-45be-9784-54a7b1f2dc83.png)
+![スクリーンショット 0003-08-17 午後3 52 39](https://user-images.githubusercontent.com/66200485/129677783-0c8b88ad-ae5f-45be-9784-54a7b1f2dc83.png)  
 Mypage
 <br>  
  
 4. タスク毎の緊急度、重要度、モチベーション、難易度のスコアを元に1週間のスケジュールが作成されます。  
 Mypageに戻り、「アクションプランのDL(赤ボタン)」をクリックして下さい。  
-![スクリーンショット 0003-08-17 午後3 52 53](https://user-images.githubusercontent.com/66200485/129677819-3b6bf278-3dc4-4f60-bf1e-604f8e3d51f0.png)
+![スクリーンショット 0003-08-17 午後3 52 53](https://user-images.githubusercontent.com/66200485/129677819-3b6bf278-3dc4-4f60-bf1e-604f8e3d51f0.png)  
 アクションプラン確認ページ
 <br>  
  
 5. 作成された1週間のスケジュールがPDF形式でダウンロードできます。    
-![スクリーンショット 0003-08-17 午後3 53 51](https://user-images.githubusercontent.com/66200485/129677987-4072b099-b4c7-4c34-83d2-66da00345e89.png)
+![スクリーンショット 0003-08-17 午後3 53 51](https://user-images.githubusercontent.com/66200485/129677987-4072b099-b4c7-4c34-83d2-66da00345e89.png)  
 PDF
 
 # Features
