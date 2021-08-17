@@ -88,7 +88,7 @@ pip install japanize_matplotlib
 
 # Usage
 
-以下をターミナルで実行して下さい。
+1. 以下をターミナルで実行して下さい。
 ```bash
 git clone https://github.com/tomohiko9090/ScheduleRevolution.git
 cd ScheduleRevolution/
@@ -97,6 +97,8 @@ python3 manage.py migrate
 python3 manage.py createsurperuser
 python3 manage.py runserver
 ```
+2. http://127.0.0.1:8000/list
+へアクセス
 
 # Author
 
