@@ -98,6 +98,7 @@ python3 manage.py runserver
 へアクセスして下さい。
 3. http://127.0.0.1:8000/admin
 では、管理画面を使用できます。
+<img width="280" alt="スクリーンショット 0003-08-23 午後11 02 11" src="https://user-images.githubusercontent.com/66200485/130460801-97b02801-03a1-433c-ad1f-ceff97be8fd0.png">
 
 # Author
 
