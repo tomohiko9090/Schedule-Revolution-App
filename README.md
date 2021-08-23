@@ -91,11 +91,13 @@ git clone https://github.com/tomohiko9090/ScheduleRevolution.git
 cd ScheduleRevolution/
 python3 manage.py makemigrations
 python3 manage.py migrate
-python3 manage.py createsurperuser
+python3 manage.py createsuperuser
 python3 manage.py runserver
 ```
 2. http://127.0.0.1:8000/list
-へアクセス
+へアクセスして下さい。
+3. http://127.0.0.1:8000/admin
+では、管理画面を使用できます。
 
 # Author
 
