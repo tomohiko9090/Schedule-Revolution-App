@@ -84,7 +84,7 @@ pip install japanize_matplotlib
 ```
 
 # Usage
-このファイルの使い方
+このリポジトリの利用方法
 1. 以下をターミナルで実行して下さい。
 ```bash
 git clone https://github.com/tomohiko9090/ScheduleRevolution.git
