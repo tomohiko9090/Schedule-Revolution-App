@@ -66,7 +66,7 @@ Mypageに戻り、「アクションプランのDL(赤ボタン)」をクリッ�
 **開発期間**:3週間  
 **開発環境**：MacOS  
 **外部サーバー(OS)**：vultur(ubuntu)  
-**DB**：外部サーバー上ではPostgreSQLを使用  
+**DB**：外部サーバー上でのみPostgreSQLを使用  
 **ライブラリ**:  
 matplotlib 3.4.2  
 pandas 1.3.0  
